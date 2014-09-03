@@ -15,8 +15,9 @@ and open the template in the editor.
         <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="libs/fontawesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
         <link href="libs/human/themes/flatty.css" rel="stylesheet" type="text/css"/>
-        <link href="css/animate.css" rel="stylesheet" type="text/css"/>
+        <link href="css/animateDash.css" rel="stylesheet" type="text/css"/>
         <link href="css/style.css" rel="stylesheet" type="text/css"/>
+        <link href="css/dashboard.css" rel="stylesheet" type="text/css"/>
         
         <!--libs------------------------------------------------------------------------->
         <script src="libs/angular/angular.js" type="text/javascript"></script>
@@ -25,13 +26,27 @@ and open the template in the editor.
         <script src="libs/human/js/humane.min.js" type="text/javascript"></script>
         
         <!--script------------------------------------------------------------------------->
-        <script src="js/account/ctrAccount.js" type="text/javascript"></script>
+        <script src="js/dashboard/CtrProject.js" type="text/javascript"></script>
         <script src="config/config.js" type="text/javascript"></script>
-        <script src="js/login.js" type="text/javascript"></script>
+        <script src="js/dashboard.js" type="text/javascript"></script>
     </head>
     <body>
         <div id="main-content">
-            <div class="viewContent" ng-view>
+            <div id="header">
+                <div class="left"><img src="img/logo.png" alt=""/></div>
+                <div class="right" ng-click="logout();"><i class="fa fa-power-off"></i></div>
+            </div>
+            <div id="sidebar">
+                <ul>
+                    <li class="active">
+                        <a><i class="fa fa-folder"></i>Projects</a>
+                    </li>
+<!--                    <li>
+                        <a><i class="fa fa-folder"></i>Projects</a>
+                    </li>-->
+                </ul>
+            </div>
+            <div id="content" class="viewContent" ng-view>
                 
             </div>
             <div id='oscuratore' ng-show="bSpin">

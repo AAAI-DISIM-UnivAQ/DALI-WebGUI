@@ -1,0 +1,11 @@
+<div class="title">
+    <h2>Projects</h2>
+    <a class="button" ng-href="#/projects/create">Create Project</a>
+</div>
+<div class="body-content">
+    <ul class="list-element">
+        <li ng-repeat="project in listproject">
+            <a ng-click="viewproject(project)">{{project.nome}}</a>
+        </li>
+    </ul>
+</div>

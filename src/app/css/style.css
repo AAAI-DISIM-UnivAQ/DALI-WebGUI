@@ -1,0 +1,43 @@
+body {
+    background: rgb(51,57,61);
+    color : rgb(119,119,119);
+}
+.popupContent {
+    padding: 40px 28px 40px;
+    margin: 150px auto;
+    text-align: center;
+    width: 550px;
+    background: white;
+}
+.popupContent img {
+    margin-bottom: 20px;
+}
+span.title {
+    font-size: 40px;
+    font-weight: bolder;
+    color: black;
+    text-shadow: 4px 3px rgba(0,0,0,0.2);
+}
+form input{
+    margin-bottom: 10px;
+    background-color: #f9f9f9!important;
+}
+p.divider {
+    margin: 20px 0 20px 0;
+    font-size: 16px;
+}
+#oscuratore {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    
+    background: rgba(0,0,0,0.3);
+    font-size: 60px;
+    color: rgb(125, 71, 67);
+    text-align: center;
+    
+    padding-top: 300px;
+    z-index: 1000;
+}

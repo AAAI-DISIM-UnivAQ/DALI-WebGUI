@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="app">
+    <head>
+        <title>DALI</title>
+        <link rel="shortcut icon" href="img/logo.png"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!--css-------------------------------------------------------------------------------->
+        <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="libs/fontawesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+        <link href="libs/human/themes/flatty.css" rel="stylesheet" type="text/css"/>
+        <link href="libs/codemirror/codemirror.css" rel="stylesheet" type="text/css"/>
+        <link href="css/animateProject.css" rel="stylesheet" type="text/css"/>
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+        <link href="css/project.css" rel="stylesheet" type="text/css"/>
+        
+        <!--libs------------------------------------------------------------------------->
+        <script src="libs/human/js/humane.min.js" type="text/javascript"></script>
+        <script src="libs/codemirror/codemirror.js" type="text/javascript"></script>
+        <script src="libs/angular/angular.js" type="text/javascript"></script>
+        <script src="libs/angular/angular-route.js" type="text/javascript"></script>
+        <script src="libs/angular/angular-animate.js" type="text/javascript"></script>
+        <script src="libs/codemirror/ui-codemirror.js" type="text/javascript"></script>
+        
+        <!--script------------------------------------------------------------------------->
+        <script src="js/project/CtrProject.js" type="text/javascript"></script>
+        <script src="config/config.js" type="text/javascript"></script>
+        <script src="js/project.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div id="main-content">
+            <div id="header">
+                <div class="left"><img src="img/logo.png" alt=""/></div>
+                <div class="right" ng-click="logout();"><i class="fa fa-power-off"></i></div>
+            </div>
+            <div id="sidebar">
+                <div id="user">
+                    <h2>{{project.nome}}</h2>
+                    <span>{{user.username}}</span>
+                </div>
+                <ul>
+                    <li>
+                        <a>
+                            <i class="fa fa-folder"></i>project<i class="fa fa-plus" ng-click="bCreatenewfile=true;"></i>
+                        </a>
+                    </li>
+                    <li ng-class="{active : (file.id === idactivefile)}" ng-click="openfile(file.id)" ng-repeat="file in filelist">
+                        <a>
+                            <i ng-class="{'fa-file' : (file.type===0), 'fa-user' : (file.type===1)}" class="fa"></i>{{file.name}}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div id="navbar">
+                <ul class="cursor">
+                    <li ng-class="{active : (filenav.id === idactivefile)}" ng-click="setactivefile(filenav.id)" ng-repeat="filenav in filenavlist">
+                        <div>{{filenav.name}}<i class="fa fa-times" ng-click="removefilenav(filenav.id)"></i></div>
+                    </li>
+                </ul>
+            </div>
+            <div id="content" class="viewContent" ng-view>
+                
+            </div>
+            <div class="evidenzia" ng-show="bCreatenewfile">
+                <div class="popupContent" ng-show="bCreatenewfile">
+                    <div class="header">Create New File</div>
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="namefile">Name</label>
+                            <input id="namefile" type="text" class="form-control" placeholder="Enter name file..." ng-model="namenewfile"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="typefile">Tipo</label>
+                            <select id="typefile" class="form-control" ng-model="typenewfile">
+                                <option value="0">Prolog</option>
+                                <option value="1">Agent</option>
+                            </select>
+                        </div>
+                        <a class="btn btn-default" ng-click="createnewfile();">Create</a>
+                        <a class="btn btn-default" ng-click="bCreatenewfile=false;">Cancel</a>
+                    </form>
+                </div>
+            </div>
+            <div id='oscuratore' ng-show="bSpin">
+                <i class="fa fa-spin fa-circle-o-notch"></i>
+            </div>
+        </div>
+    </body>
+</html>

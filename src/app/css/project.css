@@ -1,0 +1,217 @@
+body {
+    background: rgb(233,233,233); 
+}
+body a:hover, body ul.cursor > li:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*header----------------------------------------------------------------------*/
+#header {
+    position:fixed;
+    top: 0;
+    height: 35px;
+    width: 100%;
+    font-size: 22px;
+    color: rgb(219, 219, 219);
+    background: #33393d;
+    border-top: 3px solid rgb(191,103,92);
+    border-bottom: 1px solid black;
+    padding-left: 20px;
+    padding-right: 20px;
+    z-index: 11;
+}
+#header .left {
+    float: left;
+    height: 30px;
+}
+#header .right {
+    float: right;
+}
+#header img {
+    height: 25px;
+}
+
+/*sidebar--------------------------------------------------------------------*/
+#user {
+    padding: 0px 15px 19px;
+}
+#sidebar {
+    position: fixed;
+    width: 170px;
+    float: left;
+    background: #33393d;
+    height: 100%;
+    z-index: 10;
+    color: #f3f3f3;
+}
+#sidebar ul{
+    color: white;
+    list-style-type: none;
+}
+#sidebar ul li:first-child{
+    position: relative;
+    border-top: 1px solid #4c5254;
+    padding: 2px 27px 2px 4px;
+}
+#sidebar ul li:first-child i.fa-plus{
+    position: absolute;
+    right: 0;
+    height: 22px;
+    line-height: 22px;
+    width: 20px;
+    text-align: center;
+}
+#sidebar ul li{
+    font-size: 14px;
+    border-bottom: 1px solid #4c5254;
+    padding-left: 14px;
+}
+#sidebar ul li a{
+    padding: 4px 18px;
+    width: 100%;
+    color: white;
+    display: inline-block;
+}
+#sidebar ul li a i{
+    padding-right: 9px;
+    font-size: 10px;
+}
+#sidebar ul li.active{
+    background: #3d4347;
+    border-left: 2px solid red;
+}
+
+/*content--------------------------------------------------------------------*/
+div.title {
+    border-bottom: 1px solid #ddd;
+    background: #eee;
+}
+div.title h2{
+    font-size: 25px;
+    margin: 20px 0px 20px 20px;
+    display: inline-block;
+}
+.button {
+    float: right;
+    margin-top: 17px;
+    margin-right: 20px;
+    color: #fff;
+    background-color: #0074c7;
+    display: inline-block;
+    padding: 3px 14px;
+    margin-bottom: 0;
+    font-family: "Open Sans",arial,sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+#content {
+    margin-left: 170px;
+    margin-top: 0;
+}
+#content .body-content{
+    margin: 10px;
+}
+ul.list-element{
+    color: white;
+    list-style-type: none;
+}
+ul.list-element li:first-child{ 
+}
+ul.list-element li{
+    font-size: 14px;
+    background: white;
+    border-left: 3px solid rgb(214, 95, 80);
+    margin-bottom: 5px;
+    box-shadow: 1px 1px rgba(100,100,100,0.6);
+}
+ul.list-element li a{
+    padding: 10px 18px;
+    width: 100%;
+    color: rgb(139, 139, 139);
+    display: inline-block;
+}
+
+ui-codemirror > div.CodeMirror {
+    height: 100% !important;
+}
+
+button.btn-control {
+    float: right;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 70px;
+}
+
+/*navbar---------------------------------------------------------------------*/
+#navbar {
+    height : 30px;
+    margin-top: 35px;
+    background: #33393d;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    margin-left: 170px;
+}
+#navbar ul li{
+    position: relative;
+    display: inline-block;
+    border-right: 1px solid rgba(100,100,100,0.4);
+}
+#navbar ul li > div{
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    width: 110px;
+    padding-left: 5px;
+}
+#navbar ul li > div > i{
+    position: absolute;
+    display: none;
+    right: 0;
+    height: 30px;
+    line-height: 30px;
+    width: 20px;
+    text-align: center;
+}
+#navbar ul li.active, #navbar ul li:hover{
+    background: rgba(100,100,100,0.4);
+    color: white;
+}
+#navbar ul li.active > div > i, #navbar ul li:hover > div > i{
+    display: initial;
+}
+
+/* popup---------------------------------------------------------------------*/
+.evidenzia {
+    position: absolute;
+    top : 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.3);
+    z-index: 999;
+}
+.popupContent {
+    display: table;
+    padding: 0px;
+    margin: 150px auto;
+    text-align: left;
+    width: 550px;
+    background: white;
+}
+.popupContent .header {
+    background: #33393d;
+    color: white;
+    
+    font-size: 20px;
+    line-height: 40px;
+    padding-left: 15px;
+}
+.popupContent form {
+    margin: 15px 28px 40px;
+}

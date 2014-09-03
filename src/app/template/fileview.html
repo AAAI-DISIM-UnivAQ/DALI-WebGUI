@@ -1,0 +1,9 @@
+<div style="height:{{heightEditor}}px">
+    <button class="btn btn-warning btn-control" ng-click="savefile();" ng-disabled="activefile.id === -1">Save</button>
+    <!--<button class="btn btn-danger btn-control" ng-click="stopfile();" ng-disabled="activefile.id === -1">Stop</button>-->
+    <!--<button class="btn btn-success btn-control" ng-click="runfile();" ng-disabled="activefile.id === -1">Run</button>-->
+    <div style="clear: both;"></div>
+    <ui-codemirror ui-codemirror-opts="editorOptions" ng-model="activefile.text">
+        
+    </ui-codemirror>
+</div>
