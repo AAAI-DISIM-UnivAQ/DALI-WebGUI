@@ -44,7 +44,9 @@ Configuration
 ===========
 For the client side to change the configuration file ``config.js`` in the folder ``src/app/config``, enter the address and port of the server. 
 For Example
+
 ::
+
 	angular.module('CONSTANTS', [])
 		.constant('CONFIG',{
 			'url' : 'http://localhost:10000/api/'
@@ -54,7 +56,9 @@ For Example
 To change the server-side configuration file ``properties.cfg`` in the folder ``src\server\conf``, going to fill the various fields of the database and server
 src/app/config/config.js
 For Example
+
 ::
+
 	[Database]
 	MYSQL_HOST = localhost
 	MYSQL_PORT = 3306
