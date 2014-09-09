@@ -1,4 +1,13 @@
-import pexpect as pe
+'''
+    DALI-WebGUI server - The server part for the DALI user interface
+
+ Licensed with Apache Public License
+ by AAAI Research Group
+ Department of Information Engineering and Computer Science and Mathematics
+ University of L'Aquila, ITALY
+ http://www.disim.univaq.it
+
+'''
 
 import ConfigParser
 

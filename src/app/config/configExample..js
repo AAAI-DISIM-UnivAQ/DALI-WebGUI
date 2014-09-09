@@ -1,5 +1,5 @@
 angular.module('CONSTANTS', [])
     .constant('CONFIG',{
-        'url' : 'http://urlofserver:portofserver/api/'
+        'url' : 'http://188.226.232.196:10000/api/'
     });
 ;
